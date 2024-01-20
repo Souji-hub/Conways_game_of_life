@@ -30,12 +30,16 @@ This is a simple implementation of Conway's Game of Life using Python and Pygame
 
 
 ## Configuration
-rows: Number of rows in the grid.
-cols: Number of columns in the grid.
-generations: Number of generations (iterations) for the simulation.
-density: Density of live cells when initializing the grid.
-delay: Time delay (in seconds) between generations for visualization.
-cell_size: Size of each cell in pixels.
+
+| Parameter    | Description                                            |
+|--------------|--------------------------------------------------------|
+| rows         | Number of rows in the grid.                            |
+| cols         | Number of columns in the grid.                         |
+| generations  | Number of generations (iterations) for the simulation. |
+| density      | Density of live cells when initializing the grid.      |
+| delay        | Time delay (in seconds) between generations for visualization. |
+| cell_size    | Size of each cell in pixels.                           |
+
 
 ## Contributions
 Contributions are welcome! Feel free to fork this repository, make improvements, and submit a pull request.
