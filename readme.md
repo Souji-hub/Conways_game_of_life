@@ -18,8 +18,6 @@ This is a simple implementation of Conway's Game of Life using Python and Pygame
 
 1. Clone the repository:
 
-    git clone https://github.com/your-username/game-of-life.git
-
 2. Navigate to the project directory:
 
     cd game-of-life
