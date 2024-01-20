@@ -58,18 +58,11 @@ def clear_screen():
     """Clear the terminal screen."""
     os.system('cls' if os.name == 'nt' else 'clear')
 
-# def play_sound():
-#     """Play a sound after each iteration/generation."""
-#     pygame.mixer.music.load("your_sound_file.mp3")  
-#     pygame.mixer.music.play()
-
-def main(rows, cols, generations, density=0.2, delay=0.5, cell_size=20):
-    """Run the Game of Life simulation using Pygame with sound."""
+def main(rows, cols, generations, density=0.2, delay=0.2, cell_size=20):
+    """Run the Game of Life simulation using Pygame without sound."""
     pygame.init()
     screen = pygame.display.set_mode((cols * cell_size, rows * cell_size))
     pygame.display.set_caption("Game of Life")
-
-    pygame.mixer.init()  
 
     grid = initialize_grid(rows, cols, density)
 
@@ -83,20 +76,17 @@ def main(rows, cols, generations, density=0.2, delay=0.5, cell_size=20):
         print(f"Generation {generation + 1}:\n")
         draw_grid(screen, grid, cell_size)
         pygame.display.flip()
-        # play_sound()
         time.sleep(delay)
 
         grid = update_grid(grid)
 
-    pygame.mixer.quit()  
+    pygame.quit()  
 
 if __name__ == "__main__":
-    
-    rows, cols = 20, 40
+    rows, cols = 60, 60
     generations = 50
-    density = 0.2  
-    delay = 0.2   
-    cell_size = 20
+    density = 0.2
+    delay = 0.1
+    cell_size = 10
 
-    
     main(rows, cols, generations, density, delay, cell_size)
